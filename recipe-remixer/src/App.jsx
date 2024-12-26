@@ -1,7 +1,56 @@
-// import React from 'react';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  // State variables to store form data and recipes
+  const [preferredCuisine, setPreferredCuisine] = useState('');
+  const [levelOfDifficulty, setLevelOfDifficulty] = useState('');
+  const [preparationTime, setPreparationTime] = useState('');
+  const [mealType, setMealType] = useState('');
+  const [dietaryPreference, setDietaryPreference] = useState('mixed');
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // Handle form submission
+  const handleSubmit = async () => {
+    if (!preferredCuisine || !levelOfDifficulty || !preparationTime || !mealType || !dietaryPreference) {
+      alert('Please fill all fields');
+      return;
+    }
+
+    setLoading(true);
+
+    const requestData = {
+      preferredCuisine,
+      levelOfDifficulty,
+      preparationTime,
+      mealType,
+      dietaryPreference,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/recipe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        setRecipes(result.recipes); // Save recipes to state
+      } else {
+        alert('Error fetching recipes');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error connecting to the server');
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="app">
       <header className="header">
@@ -15,12 +64,22 @@ function App() {
         <div className="input-container">
           <div className="input-group">
             <label htmlFor="cuisine">Preferred Cuisine</label>
-            <input id="cuisine" type="text" placeholder="Enter cuisine" />
+            <input
+              id="cuisine"
+              type="text"
+              placeholder="Enter cuisine"
+              value={preferredCuisine}
+              onChange={(e) => setPreferredCuisine(e.target.value)}
+            />
           </div>
           <div className="input-group">
             <label htmlFor="difficulty">Level of Difficulty</label>
-            <select id="difficulty">
-              <option value="" disabled selected>
+            <select
+              id="difficulty"
+              value={levelOfDifficulty}
+              onChange={(e) => setLevelOfDifficulty(e.target.value)}
+            >
+              <option value="" disabled>
                 Select difficulty level
               </option>
               <option value="easy">Easy</option>
@@ -30,12 +89,22 @@ function App() {
           </div>
           <div className="input-group">
             <label htmlFor="time">Preparation Time</label>
-            <input id="time" type="text" placeholder="Enter preparation time" />
+            <input
+              id="time"
+              type="text"
+              placeholder="Enter preparation time"
+              value={preparationTime}
+              onChange={(e) => setPreparationTime(e.target.value)}
+            />
           </div>
           <div className="input-group">
             <label htmlFor="meal-type">Meal Type</label>
-            <select id="meal-type">
-              <option value="" disabled selected>
+            <select
+              id="meal-type"
+              value={mealType}
+              onChange={(e) => setMealType(e.target.value)}
+            >
+              <option value="" disabled>
                 Select meal type
               </option>
               <option value="breakfast">Breakfast</option>
@@ -45,14 +114,54 @@ function App() {
             </select>
           </div>
         </div>
+
+        {/* Dietary Preference Buttons */}
         <div className="button-group">
-          <button className="toggle-button active">Mixed</button>
+          <button
+            className={`toggle-button ${dietaryPreference === 'mixed' ? 'active' : ''}`}
+            onClick={() => setDietaryPreference('mixed')}
+          >
+            Mixed
+          </button>
           <div className="divider"></div>
-          <button className="toggle-button">Veg</button>
+          <button
+            className={`toggle-button ${dietaryPreference === 'veg' ? 'active' : ''}`}
+            onClick={() => setDietaryPreference('veg')}
+          >
+            Veg
+          </button>
           <div className="divider"></div>
-          <button className="toggle-button">Non-Veg</button>
+          <button
+            className={`toggle-button ${dietaryPreference === 'non-veg' ? 'active' : ''}`}
+            onClick={() => setDietaryPreference('non-veg')}
+          >
+            Non-Veg
+          </button>
         </div>
-        <button className="let-him-cook-btn">Let Him Cook</button>
+
+        {/* Let Him Cook Button */}
+        <button
+          className="let-him-cook-btn"
+          onClick={handleSubmit}
+          disabled={loading}
+        >
+          {loading ? 'Cooking...' : 'Let Him Cook'}
+        </button>
+
+        {/* Display the recipes */}
+        {recipes.length > 0 && (
+          <div className="recipe-results">
+            <h2>Recipes</h2>
+            <ul>
+              {recipes.map((recipe, index) => (
+                <li key={index}>
+                  <h3>{recipe.name}</h3>
+                  <p>{recipe.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </main>
       <footer className="footer-left" />
       <footer className="footer-right" />

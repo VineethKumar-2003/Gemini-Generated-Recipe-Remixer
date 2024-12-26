@@ -16,6 +16,7 @@ const GEMINI_API_KEY = 'AIzaSyAQWaGNUH85ReFZ7vJvvpRPZKjwvfBmloo';
 app.post('/recipe', async (req, res) => {
   const { preferredCuisine, levelOfDifficulty, preparationTime, mealType, dietaryPreference } = req.body;
 
+  // Check if all required fields are provided
   if (!preferredCuisine || !levelOfDifficulty || !preparationTime || !mealType) {
     return res.status(400).json({ message: 'All fields are required' });
   }
@@ -33,7 +34,7 @@ app.post('/recipe', async (req, res) => {
     // Making request to Gemini API (assuming POST method)
     const response = await axios.post('https://gemini-api-url.com', requestPayload, {
       headers: {
-        'Authorization': Bearer ${GEMINI_API_KEY},
+        'Authorization': `Bearer ${GEMINI_API_KEY}`, // Fixed Authorization header
         'Content-Type': 'application/json',
       },
     });
@@ -49,5 +50,5 @@ app.post('/recipe', async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(Server is running on http://localhost:${port});
+  console.log(`Server is running on http://localhost:${port}`); // Fixed string interpolation
 });
