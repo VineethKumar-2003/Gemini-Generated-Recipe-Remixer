@@ -44,7 +44,7 @@ body, html, #root {
 .main {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: 2rem;
   text-align: center;
@@ -170,7 +170,7 @@ select {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.15);
   color: #c6cbc2;
-  font-size: 1.0rem;
+  font-size: 1rem;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(8px);
@@ -179,7 +179,7 @@ select {
   -moz-appearance: none;
   padding-right: 2rem;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path fill="white" d="M0 0 L5 5 L10 0" /></svg>');
-  background-position: right 1rem center;
+  background-position: right 2rem center;
   background-repeat: no-repeat;
   background-size: 10px;
 }
@@ -188,17 +188,18 @@ select {
 .button-group {
   display: flex;
   align-items: center;
+  align-self: flex-start;
   justify-content: flex-start;
   background: linear-gradient(145deg, #2d4724, #3a5a2d); /* Subtle gradient background */
   border: 2px solid #4ea74e; /* Group border color */
-  border-radius: 25px; /* Smooth curved edges, less rounded now */
+  border-radius: 15px; /* Smooth curved edges, less rounded now */
   overflow: hidden;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
-  padding: 0.3rem 0.5rem; /* Slimmer padding */
-  width: fit-content;
-  margin: 1.5rem auto; /* Centered */
-  height: 3rem; /* Adjust height to align with text and make it compact */
-  min-width: 12rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  padding: 0.2rem 0.4rem; /* Slimmer padding */
+  width: fit-content; /* Centered */
+  margin-top: 1rem;
+  height: 2.5rem; /* Adjust height to align with text and make it compact */
+  min-width: 10rem;
   margin-top: 1rem;
 }
 
@@ -207,8 +208,8 @@ select {
   flex: 1; /* Equal space for each button */
   text-align: center;
   white-space: nowrap;
-  padding: 0.3rem 0.8rem;
-  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #ffffff;
   background: transparent; /* Transparent to blend with the group */
@@ -251,6 +252,37 @@ select {
 /* Smooth Hover Glow */
 .toggle-button:hover::before {
   box-shadow: 0 0 8px #4ea74e, 0 0 15px #62c762;
+}
+
+.let-him-cook-btn {
+  position: absolute; /* Ensures absolute positioning relative to the nearest positioned parent */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(145deg, #ff8c00, #ff4500);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  min-width: 10rem;
+  top: calc(96.9% - 1rem);
+  left: calc(50% + 7.5rem);
+  transform: translateY(-10px);
+}
+
+
+.let-him-cook-btn:hover {
+  background: linear-gradient(145deg, #ff4500, #ff8c00);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+.let-him-cook-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .dropdown-wrapper {

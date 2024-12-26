@@ -52,6 +52,7 @@ function App() {
           <div className="divider"></div>
           <button className="toggle-button">Non-Veg</button>
         </div>
+        <button className="let-him-cook-btn">Let Him Cook</button>
       </main>
       <footer className="footer-left" />
       <footer className="footer-right" />
