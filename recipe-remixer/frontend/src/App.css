@@ -1,0 +1,417 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(ellipse at top, rgba(60, 100, 30, 0.3) 20%, #1e1e1e 80%);
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.main-title {
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: -1rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0.25rem;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+input:hover,
+input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-left {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 400px;
+  height: 300px;
+  background-image: url('../src/assets/images/vegetables\ bg\ illustration.png'); /* Replace with actual path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  transform: scale(1);
+  z-index: 1;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.footer-right {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 400px;
+  height: 300px;
+  background-image: url('../src/assets/images/vegetables\ bg\ illustration.png'); /* Replace with actual path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  transform: scale(1);
+  z-index: 1;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.footer-connect {
+  position: absolute;
+  bottom: -51px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-image: url('../src/assets/images/vegetables\ bg\ illustration.png'); /* Replace with actual path */
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
+  opacity: 0.9;
+  z-index: 2;
+  pointer-events: none;
+}
+
+select {
+  width: 106%;
+  padding: 1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #c6cbc2;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path fill="white" d="M0 0 L5 5 L10 0" /></svg>');
+  background-position: right 2rem center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+/* Group Container */
+.button-group {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: flex-start;
+  background: linear-gradient(145deg, #2d4724, #3a5a2d); /* Subtle gradient background */
+  border: 2px solid #4ea74e; /* Group border color */
+  border-radius: 15px; /* Smooth curved edges, less rounded now */
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  padding: 0.2rem 0.4rem; /* Slimmer padding */
+  width: fit-content; /* Centered */
+  margin-top: 1rem;
+  height: 2.5rem; /* Adjust height to align with text and make it compact */
+  min-width: 10rem;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.toggle-button {
+  flex: 1; /* Equal space for each button */
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: transparent; /* Transparent to blend with the group */
+  border: none; /* No button borders */
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active Button Glow Effect */
+.toggle-button.active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(145deg, #4ea74e, #62c762);
+  border-radius: 20px;
+  z-index: -1;
+  box-shadow: 0 0 10px #4ea74e, 0 0 15px #62c762;
+}
+
+/* Hover Effect */
+.toggle-button:hover {
+  color: #4ea74e;
+  background: rgba(78, 167, 78, 0.2);
+  border-radius: 20px;
+}
+
+/* Dividers */
+.divider {
+  width: 1px; /* Slimmer divider */
+  background: linear-gradient(180deg, #4ea74e, #62c762); /* Soft gradient for dividers */
+  height: 60%; /* Reduced height for alignment */
+  align-self: center;
+  box-shadow: 0 0 8px rgba(78, 167, 78, 0.3); /* Subtle glow */
+}
+
+/* Smooth Hover Glow */
+.toggle-button:hover::before {
+  box-shadow: 0 0 8px #4ea74e, 0 0 15px #62c762;
+}
+
+.let-him-cook-btn {
+  position: absolute; /* Ensures absolute positioning relative to the nearest positioned parent */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(145deg, #ff8c00, #ff4500);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  min-width: 10rem;
+  top: calc(96.9% - 1rem);
+  left: calc(50% + 7.5rem);
+  transform: translateY(-10px);
+}
+
+
+.let-him-cook-btn:hover {
+  background: linear-gradient(145deg, #ff4500, #ff8c00);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+.let-him-cook-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path fill="white" d="M0 0 L5 5 L10 0" /></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+select option {
+  background: #1e1e1e;
+  color: white;
+  font-size: 1rem;
+}
+
+select:focus + .dropdown-wrapper::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
+}
+
+.car-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-button {
+  background: linear-gradient(145deg, #4ea74e, #62c762);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-button:hover {
+  background: linear-gradient(145deg, #62c762, #4ea74e);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .input-container {
+    max-width: 400px;
+  }
+
+  .input-group {
+    gap: 0.25rem;
+  }
+
+  input {
+    padding: 0.8rem;
+  }
+
+  .header-container {
+    left: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 300px;
+    height: 250px;
+    transform: scale(1);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
