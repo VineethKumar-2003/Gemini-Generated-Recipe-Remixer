@@ -316,7 +316,7 @@ select:focus + .dropdown-wrapper::after {
 }
 
 @media (max-width: 768px) {
-  .main {
+  .main-content {
     top: 2rem;
     padding: 0 1rem;
   }
@@ -333,11 +333,12 @@ select:focus + .dropdown-wrapper::after {
     padding: 0.8rem;
   }
 
-  .header {
+  .header-container {
     left: 1rem;
   }
 
-  .footer {
+  .footer-left,
+  .footer-right {
     width: 300px;
     height: 250px;
     transform: scale(1);

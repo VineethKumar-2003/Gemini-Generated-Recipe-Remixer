@@ -10,6 +10,8 @@ function App() {
   const [dietaryPreference, setDietaryPreference] = useState('mixed');
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);  // To handle pagination
+  const [totalPages, setTotalPages] = useState(1);  // To track total pages
 
   // Handle form submission
   const handleSubmit = async () => {
@@ -26,6 +28,8 @@ function App() {
       preparationTime,
       mealType,
       dietaryPreference,
+      page,  // Include the current page in the request
+      limit: 5,  // Limit to 5 recipes per page
     };
 
     try {
@@ -39,7 +43,8 @@ function App() {
 
       if (response.ok) {
         const result = await response.json();
-        setRecipes(result.recipes); // Save recipes to state
+        setRecipes(result.recipes);  // Save recipes to state
+        setTotalPages(result.totalPages);  // Set total pages for pagination
       } else {
         alert('Error fetching recipes');
       }
@@ -49,6 +54,14 @@ function App() {
     }
 
     setLoading(false);
+  };
+
+  // Handle page change for pagination
+  const handlePageChange = (newPage) => {
+    if (newPage > 0 && newPage <= totalPages) {
+      setPage(newPage);
+      handleSubmit();  // Refetch recipes for the new page
+    }
   };
 
   return (
@@ -79,9 +92,7 @@ function App() {
               value={levelOfDifficulty}
               onChange={(e) => setLevelOfDifficulty(e.target.value)}
             >
-              <option value="" disabled>
-                Select difficulty level
-              </option>
+              <option value="" disabled>Select difficulty level</option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
@@ -104,9 +115,7 @@ function App() {
               value={mealType}
               onChange={(e) => setMealType(e.target.value)}
             >
-              <option value="" disabled>
-                Select meal type
-              </option>
+              <option value="" disabled>Select meal type</option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
@@ -149,19 +158,40 @@ function App() {
         </button>
 
         {/* Display the recipes */}
-        {recipes.length > 0 && (
-          <div className="recipe-results">
-            <h2>Recipes</h2>
-            <ul>
-              {recipes.map((recipe, index) => (
+        <div className="recipe-results">
+          <h2>Recipes</h2>
+          <ul>
+            {recipes.length > 0 ? (
+              recipes.map((recipe, index) => (
                 <li key={index}>
                   <h3>{recipe.name}</h3>
                   <p>{recipe.description}</p>
                 </li>
-              ))}
-            </ul>
-          </div>
-        )}
+              ))
+            ) : (
+              <p>No recipes available.</p>
+            )}
+          </ul>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button
+                onClick={() => handlePageChange(page - 1)}
+                disabled={page === 1}
+              >
+                Previous
+              </button>
+              <span>Page {page} of {totalPages}</span>
+              <button
+                onClick={() => handlePageChange(page + 1)}
+                disabled={page === totalPages}
+              >
+                Next
+              </button>
+            </div>
+          )}
+        </div>
       </main>
       <footer className="footer-left" />
       <footer className="footer-right" />
