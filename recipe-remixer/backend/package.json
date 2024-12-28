@@ -1,26 +1,24 @@
 {
-  "name": "netlify-functions",
+  "name": "recipe-remixer",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "nodemon functions/server.js",
-    "start": "node functions/server.js",
+    "start-dev": "nodemon server.js",
+    "start": "node server.js",
     "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@netlify/functions": "^2.0.0",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "grep": "^0.1.0",
-    "nodemon": "^3.1.9",
-    "serverless-http": "3.2.0"
+    "nodemon": "^3.1.9"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
