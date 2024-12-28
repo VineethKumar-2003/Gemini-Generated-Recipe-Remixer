@@ -61,6 +61,9 @@ app.post('/recipe', async (req, res) => {
     - Do NOT wrap the response in quotes or code blocks
     - Each field should be a simple string or array of strings
     - Generate 3-5 recipes maximum
+    - Do Not Repeat Recipes
+    - For Every Generation the recipe should be unique
+    - Also Sometimes add fun recipes in fun way
     `;
 
     const requestPayload = { contents: [{ parts: [{ text: requestPrompt }] }] };
