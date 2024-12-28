@@ -67,7 +67,8 @@ function App() {
     return (
       <div className="loading-screen">
         <h1>Gemini is Cooking...</h1>
-        <p>"Patience is the secret ingredient!"</p>
+        <p>&quot;Patience is the secret ingredient!&quot;</p>
+        <div className="spinner"></div>
       </div>
     );
   }
@@ -75,9 +76,6 @@ function App() {
   if (currentPage === 'recipe-detail') {
     return (
       <div className="recipe-detail-page">
-        <button className="back-button" onClick={() => setCurrentPage('recipes')}>
-          Back to Recipes
-        </button>
         <div className="recipe-detail-container">
           <h1>{selectedRecipe.name}</h1>
           <div className="recipe-overview">
@@ -113,10 +111,24 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="navigation-buttons">
+          <button 
+            className="back-button"
+            onClick={() => setCurrentPage('recipes')}
+          >
+            Back to Recipes
+          </button>
+          <button 
+            className="back-button home-button"
+            onClick={() => setCurrentPage('form')}
+          >
+            Back to Form
+          </button>
+        </div>
       </div>
     );
   }
-
+  
   if (currentPage === 'recipes') {
     return (
       <div className="recipes-page">

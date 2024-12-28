@@ -169,3 +169,120 @@
 2024-12-28T05:38:14.613Z - Server started on port 5000
 2024-12-28T05:39:38.322Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 60 minutes","mealType":"dinner","dietaryPreference":"mixed"}
 2024-12-28T05:39:38.323Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 60 minutes\n    - Meal Type: dinner\n    - Dietary Preference: mixed\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T06:30:49.289Z - Received request: {"preferredCuisine":"South Indian","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"lunch","dietaryPreference":"non-veg"}
+2024-12-28T06:30:49.294Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate South Indian recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: lunch\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T06:46:50.742Z - Received request: {"preferredCuisine":"South Indian","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"lunch","dietaryPreference":"non-veg"}
+2024-12-28T06:46:50.743Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate South Indian recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: lunch\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T06:47:17.174Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"dinner","dietaryPreference":"mixed"}
+2024-12-28T06:47:17.181Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: dinner\n    - Dietary Preference: mixed\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T06:54:16.236Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"dinner","dietaryPreference":"mixed"}
+2024-12-28T06:54:16.238Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: dinner\n    - Dietary Preference: mixed\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T07:05:30.060Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"dinner","dietaryPreference":"non-veg"}
+2024-12-28T07:05:30.062Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: dinner\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T07:05:38.094Z - Error parsing JSON: Unexpected token ] in JSON at position 3485
+Raw text: [
+  {
+    "name": "Boeuf Bourguignon",
+    "yields": "6 servings",
+    "preparationTime": "60 minutes",
+    "cookTime": "3 hours",
+    "ingredients": [
+      "1.5 kg beef stew meat, cut into 2-3 cm cubes",
+      "2 tbsp olive oil",
+      "1 large onion, chopped",
+      "2 carrots, chopped",
+      "2 celery stalks, chopped",
+      "2 cloves garlic, minced",
+      "1 bottle (750ml) dry red wine",
+      "500g button mushrooms",
+      "1 tbsp tomato paste",
+      "400g canned chopped tomatoes",
+      "2 tbsp all-purpose flour",
+      "1 tsp dried thyme",
+      "1 bay leaf",
+      "Beef broth",
+      "Salt and pepper to taste",
+      "Fresh parsley, chopped (for garnish)"
+    ],
+    "instructions": [
+      "Season beef cubes with salt and pepper. Brown in batches in olive oil over medium-high heat. Remove and set aside.",
+      "Add onion, carrots, and celery to the pot and cook until softened. Add garlic and cook for 1 minute more.",
+      "Stir in flour and cook for 1 minute. Gradually whisk in red wine and tomato paste.",
+      "Add canned tomatoes, thyme, and bay leaf. Bring to a simmer.",
+      "Return beef to the pot. Add enough beef broth to almost cover the meat.  Bring to a boil then reduce heat to low, cover, and simmer for at least 2.5-3 hours, or until the beef is very tender.",
+      "Add mushrooms during the last 30 minutes of cooking.",
+      "Remove bay leaf before serving. Garnish with parsley."
+    ]
+  },
+  {
+    "name": "Cassoulet Toulousain (simplified)",
+    "yields": "4 servings",
+    "preparationTime": "45 minutes",
+    "cookTime": "2 hours",
+    "ingredients": [
+      "400g sausage (Toulouse sausage preferred, but any hearty sausage works)",
+      "400g confit duck legs",
+      "1 large onion, chopped",
+      "2 cloves garlic, minced",
+      "1 tbsp tomato paste",
+      "1 tsp dried thyme",
+      "400g can of white beans, drained and rinsed",
+      "1 cup chicken broth",
+      "Breadcrumbs",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C (350°F).",
+      "Brown sausages in a large oven-safe pot. Remove and set aside.",
+      "Add onion and garlic to the pot and cook until softened. Stir in tomato paste and thyme.",
+      "Add white beans and chicken broth. Bring to a simmer.",
+      "Place sausages, duck legs, and breadcrumbs on top of the bean mixture.",
+      "Bake in the preheated oven for 1.5-2 hours, or until heated through and bubbly.",
+      "Season with salt and pepper before serving."
+    ]
+  },
+  {
+    "name": "Crêpes Suzette",
+    "yields": "4 servings",
+    "preparationTime": "30 minutes",
+    "cookTime": "20 minutes",
+    "ingredients": [
+      "125g all-purpose flour",
+      "2 large eggs",
+      "250ml milk",
+      "Pinch of salt",
+      "2 tbsp melted butter",
+      "4 tbsp Grand Marnier",
+      "4 tbsp sugar",
+      "2 tbsp butter",
+      "Orange zest (optional)"
+    ],
+    "instructions": [
+      "Whisk together flour, eggs, milk, and salt until smooth.  Let the batter rest for at least 30 minutes.",
+      "Heat a lightly oiled crêpe pan or non-stick skillet over medium heat.",
+      "Cook crêpes for 1-2 minutes per side, or until golden brown. Stack and keep warm.",
+      "In a separate saucepan, melt butter, add sugar and cook until caramelized.",
+      "Add Grand Marnier and orange zest (if using). Stir until slightly thickened.",
+      "Place crêpes in the sauce and toss to coat.  Serve immediately, flambéed if desired (carefully!)",
+    ]
+  }
+]
+
+2024-12-28T07:05:49.755Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"dinner","dietaryPreference":"mixed"}
+2024-12-28T07:05:49.757Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: dinner\n    - Dietary Preference: mixed\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T07:12:20.068Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"dinner","dietaryPreference":"mixed"}
+2024-12-28T07:12:20.069Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: dinner\n    - Dietary Preference: mixed\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T07:36:28.414Z - Received request: {"preferredCuisine":"French","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"dinner","dietaryPreference":"mixed"}
+2024-12-28T07:36:28.416Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate French recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: dinner\n    - Dietary Preference: mixed\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T07:36:57.854Z - Received request: {"preferredCuisine":"Chennai","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"lunch","dietaryPreference":"non-veg"}
+2024-12-28T07:36:57.855Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate Chennai recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: lunch\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T08:16:32.244Z - Received request: {"preferredCuisine":"Andhra Pradesh","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"lunch","dietaryPreference":"non-veg"}
+2024-12-28T08:16:32.245Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate Andhra Pradesh recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: lunch\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T08:17:46.998Z - Received request: {"preferredCuisine":"Andhra Pradesh","levelOfDifficulty":"medium","preparationTime":"30 - 180 minutes","mealType":"lunch","dietaryPreference":"non-veg"}
+2024-12-28T08:17:46.999Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate Andhra Pradesh recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 30 - 180 minutes\n    - Meal Type: lunch\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T08:31:22.089Z - Received request: {"preferredCuisine":"South Indian","levelOfDifficulty":"medium","preparationTime":"10 - 60 minutes","mealType":"dinner","dietaryPreference":"non-veg"}
+2024-12-28T08:31:22.089Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate South Indian recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 10 - 60 minutes\n    - Meal Type: dinner\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T08:44:10.338Z - Received request: {"preferredCuisine":"South Indian","levelOfDifficulty":"medium","preparationTime":"10 - 60 minutes","mealType":"dinner","dietaryPreference":"non-veg"}
+2024-12-28T08:44:10.339Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate South Indian recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 10 - 60 minutes\n    - Meal Type: dinner\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
+2024-12-28T08:50:54.440Z - Received request: {"preferredCuisine":"South Indian","levelOfDifficulty":"medium","preparationTime":"10 - 60 minutes","mealType":"dinner","dietaryPreference":"non-veg"}
+2024-12-28T08:50:54.441Z - Sending request to Gemini API: {"contents":[{"parts":[{"text":"\n    Generate South Indian recipes based on these preferences:\n    - Difficulty: medium\n    - Preparation Time: 10 - 60 minutes\n    - Meal Type: dinner\n    - Dietary Preference: non-veg\n\n    Return the response as a JSON array of recipes. Each recipe should have this exact structure:\n    [\n      {\n        \"name\": \"Recipe Name\",\n        \"yields\": \"Number of servings\",\n        \"preparationTime\": \"Preparation time\",\n        \"cookTime\": \"Cooking time\",\n        \"ingredients\": [\n          \"ingredient 1\",\n          \"ingredient 2\"\n        ],\n        \"instructions\": [\n          \"step 1\",\n          \"step 2\"\n        ]\n      }\n    ]\n\n    Important: \n    - Return ONLY the JSON array\n    - Do NOT include any markdown formatting or comments\n    - Do NOT wrap the response in quotes or code blocks\n    - Each field should be a simple string or array of strings\n    - Generate 3-5 recipes maximum\n    "}]}]}
