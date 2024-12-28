@@ -32,7 +32,7 @@ function App() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/recipe', {
+      const response = await fetch('http://localhost:5000/recipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,8 +46,7 @@ function App() {
         setLoading(false);
         setCurrentPage('recipes');
       } else {
-        const errorData = await response.json();
-        alert(errorData.message || 'Error fetching recipes');
+        alert('Error fetching recipes');
         setLoading(false);
         setCurrentPage('form');
       }

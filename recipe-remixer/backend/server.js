@@ -71,6 +71,9 @@ app.post('/recipe', async (req, res) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
+    // Log the response for debugging
+    logToFile(`Gemini API response: ${JSON.stringify(response.data)}`);
+
     if (response.data?.candidates?.[0]?.content?.parts?.[0]?.text) {
       const rawText = response.data.candidates[0].content.parts[0].text;
       
@@ -112,6 +115,10 @@ app.post('/recipe', async (req, res) => {
     }
   } catch (error) {
     logToFile(`Error fetching recipes: ${error.message}`);
+    // Log the full error response for debugging
+    if (error.response) {
+      logToFile(`Gemini API error response: ${JSON.stringify(error.response.data)}`);
+    }
     res.status(500).json({ 
       message: 'Error fetching recipes from Gemini API', 
       error: error.message 
