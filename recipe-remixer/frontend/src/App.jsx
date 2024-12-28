@@ -46,7 +46,8 @@ function App() {
         setLoading(false);
         setCurrentPage('recipes');
       } else {
-        alert('Error fetching recipes');
+        const errorData = await response.json();
+        alert(errorData.message || 'Error fetching recipes');
         setLoading(false);
         setCurrentPage('form');
       }
