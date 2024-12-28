@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "netlify dev",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "frontend": "cd recipe-remixer && cd frontend && npm run dev",
+    "backend": "cd recipe-remixer && cd backend && npm run start-dev"
   },
   "keywords": [],
   "author": "",
