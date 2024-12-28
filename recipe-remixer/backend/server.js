@@ -8,9 +8,7 @@ const app = express();
 const port = 5000;
 
 app.use(express.json());
-app.use(cors({
-  origin: 'https://recipe-remixer-with-gemini.web.app/'
-}));
+app.use(cors());
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
@@ -63,6 +61,7 @@ app.post('/recipe', async (req, res) => {
     - Do NOT wrap the response in quotes or code blocks
     - Each field should be a simple string or array of strings
     - Generate 3-5 recipes maximum
+    - Every Generation Should be Unique
     `;
 
     const requestPayload = { contents: [{ parts: [{ text: requestPrompt }] }] };
