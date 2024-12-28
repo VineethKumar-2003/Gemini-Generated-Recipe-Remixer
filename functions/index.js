@@ -1,14 +1,16 @@
+// Import necessary Firebase Functions packages
+const { onRequest } = require("firebase-functions/v2/https");
+const logger = require("firebase-functions/logger");
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const fs = require("fs");
-const functions = require("firebase-functions"); // Required for Firebase Functions
-
 require("dotenv").config();
 
+// Initialize Express app
 const app = express();
-const port = 5000; // Port is not relevant for Firebase Functions, but good for local testing
 
+// Use necessary middlewares
 app.use(express.json());
 app.use(cors());
 
@@ -16,7 +18,7 @@ app.use(cors());
 const GEMINI_API_KEY = functions.config().gemini.apikey;
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
-// Logging utility
+// Logging utility to log to a file
 const logToFile = (message) => {
   const logMessage = `${new Date().toISOString()} - ${message}\n`;
   fs.appendFileSync("server.log", logMessage, "utf8");
@@ -81,7 +83,7 @@ app.post("/recipe", async (req, res) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    // Parse response from Gemini API
+    // Check if the response data is properly structured
     if (response.data?.candidates?.[0]?.content?.parts?.[0]?.text) {
       const rawText = response.data.candidates[0].content.parts[0].text;
 
@@ -126,11 +128,13 @@ app.post("/recipe", async (req, res) => {
   }
 });
 
-// Start server (useful for local testing, not needed for Firebase Functions)
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-  logToFile(`Server started on port ${port}`);
+// Firebase Function to handle HTTP requests
+exports.api = onRequest((request, response) => {
+  // Log the incoming request for debugging
+  logger.info("Received request", { structuredData: true });
+
+  // Handle the express app logic
+  app(request, response);
 });
 
-// Export app for serverless deployment (this is the key part for Firebase Functions)
 exports.api = functions.https.onRequest(app);
