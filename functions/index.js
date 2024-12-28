@@ -1,4 +1,5 @@
 // Import necessary Firebase Functions packages
+const functions = require("firebase-functions");
 const { onRequest } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 const express = require("express");
@@ -136,5 +137,3 @@ exports.api = onRequest((request, response) => {
   // Handle the express app logic
   app(request, response);
 });
-
-exports.api = functions.https.onRequest(app);
