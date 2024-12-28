@@ -13,18 +13,18 @@ package.json
 package-lock.json
 
 # Frontend-specific files
-recipe-remixer/frontend/vite.config.js
-recipe-remixer/frontend/eslint.config.js
-recipe-remixer/frontend/package.json
-recipe-remixer/frontend/package-lock.json
-recipe-remixer/frontend/node_modules
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/frontend/vite.config.js
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/frontend/eslint.config.js
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/frontend/package.json
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/frontend/package-lock.json
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/frontend/node_modules/
 
 # Backend-specific files
-recipe-remixer/backend/.env
-recipe-remixer/backend/package.json
-recipe-remixer/backend/package-lock.json
-recipe-remixer/backend/server.log
-recipe-remixer/backend/node_modules
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/backend/.env
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/backend/package.json
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/backend/package-lock.json
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/backend/server.log
+GEMINI-GENERATED RECIPE REMIXER/recipe-remixer/backend/node_modules/
 
 # Build outputs
 dist
