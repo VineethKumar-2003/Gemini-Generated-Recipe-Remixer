@@ -2,20 +2,20 @@
 A modern web application that uses Gemini AI to generate personalized recipe recommendations. Users input ingredients or meal preferences, and the AI provides multiple recipe variations, from simple home-style dishes to more elaborate gourmet options. The app is designed to be intuitive, offering step-by-step instructions and allowing users to filter based on dietary preferences or cooking skill levels. Built with React and Vite for the frontend, and Express for the backend, the application ensures fast, responsive performance.
 
 ## Table of Contents
--[Features](#features)
--[Tech Stack](#text-stack)
--[Setup](#setup)
-  -[Prerequisites](#prerequisites)
-  -[Installation](#installation)
--[API Endpoints](#api-endpoints)
-  -[POST /recipe](post-/recipe)
-    -[Recipe Body](#recipe-body)
-    -[Example](#example)
-    -[Response](#response)
--[Error Handling](#error-handling)
--[Future Enhancements](#future-enhancements)
--[Contributors](#contributors)
--[Future Contributions](#future-contributions)
+- [Features](#features)
+- [Tech Stack](#text-stack)
+- [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+  - [POST /recipe](post-/recipe)
+    - [Recipe Body](#recipe-body)
+    - [Example](#example)
+    - [Response](#response)
+- [Error Handling](#error-handling)
+- [Future Enhancements](#future-enhancements)
+- [Contributors](#contributors)
+- [Future Contributions](#future-contributions)
 
 ## Features
 - **Personalized Recipe Generation**: Get unique recipes based on:
