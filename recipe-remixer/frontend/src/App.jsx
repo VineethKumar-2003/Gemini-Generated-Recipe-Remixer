@@ -9,8 +9,9 @@ function App() {
   const [mealType, setMealType] = useState('');
   const [dietaryPreference, setDietaryPreference] = useState('mixed');
   const [loading, setLoading] = useState(false);
-  const [recipes, setRecipes] = useState([]); // To store recipes
-  const [currentPage, setCurrentPage] = useState('form'); // Tracks the current page
+  const [recipes, setRecipes] = useState([]); 
+  const [currentPage, setCurrentPage] = useState('form');
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   // Handle form submission
   const handleSubmit = async () => {
@@ -28,7 +29,6 @@ function App() {
       preparationTime,
       mealType,
       dietaryPreference,
-      limit: 5, // Limit to 5 recipes
     };
 
     try {
@@ -42,7 +42,7 @@ function App() {
 
       if (response.ok) {
         const result = await response.json();
-        setRecipes(result.recipes || []);
+        setRecipes(result || []); 
         setLoading(false);
         setCurrentPage('recipes');
       } else {
@@ -58,6 +58,11 @@ function App() {
     }
   };
 
+  const handleRecipeSelect = (recipe) => {
+    setSelectedRecipe(recipe);
+    setCurrentPage('recipe-detail');
+  };
+
   if (currentPage === 'loading') {
     return (
       <div className="loading-screen">
@@ -67,21 +72,73 @@ function App() {
     );
   }
 
+  if (currentPage === 'recipe-detail') {
+    return (
+      <div className="recipe-detail-page">
+        <button className="back-button" onClick={() => setCurrentPage('recipes')}>
+          Back to Recipes
+        </button>
+        <div className="recipe-detail-container">
+          <h1>{selectedRecipe.name}</h1>
+          <div className="recipe-overview">
+            <div className="recipe-stat">
+              <span>Yields</span>
+              <p>{selectedRecipe.yields}</p>
+            </div>
+            <div className="recipe-stat">
+              <span>Prep Time</span>
+              <p>{selectedRecipe.preparationTime}</p>
+            </div>
+            <div className="recipe-stat">
+              <span>Cook Time</span>
+              <p>{selectedRecipe.cookTime}</p>
+            </div>
+          </div>
+          <div className="recipe-content">
+            <div className="recipe-section">
+              <h2>Ingredients</h2>
+              <ul>
+                {selectedRecipe.ingredients.map((ingredient, idx) => (
+                  <li key={idx}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="recipe-section">
+              <h2>Instructions</h2>
+              <ol>
+                {selectedRecipe.instructions.map((instruction, idx) => (
+                  <li key={idx}>{instruction}</li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (currentPage === 'recipes') {
     return (
       <div className="recipes-page">
         <h1>Recommended Recipes</h1>
-        <div className="recipes-container">
-          {recipes.length > 0 ? (
+        <div className="recipes-grid">
+          {recipes && recipes.length > 0 ? (
             recipes.map((recipe, index) => (
-              <div key={index} className="recipe-card">
-                <img src={recipe.imageUrl} alt={recipe.name} className="recipe-image" />
-                <h2 className="recipe-name">{recipe.name}</h2>
-                <p className="recipe-time">Preparation Time: {recipe.time} minutes</p>
+              <div 
+                key={index} 
+                className="recipe-card"
+                onClick={() => handleRecipeSelect(recipe)}
+              >
+                <h2>{recipe.name}</h2>
+                <div className="recipe-card-details">
+                  <p><span>Yields:</span> {recipe.yields}</p>
+                  <p><span>Prep Time:</span> {recipe.preparationTime}</p>
+                  <p><span>Cook Time:</span> {recipe.cookTime}</p>
+                </div>
               </div>
             ))
           ) : (
-            <p>No recipes found. Try adjusting your preferences.</p>
+            <p className="no-recipes">No recipes found. Try adjusting your preferences.</p>
           )}
         </div>
         <button className="back-button" onClick={() => setCurrentPage('form')}>
@@ -151,7 +208,6 @@ function App() {
           </div>
         </div>
 
-        {/* Dietary Preference Buttons */}
         <div className="button-group">
           <button
             className={`toggle-button ${dietaryPreference === 'mixed' ? 'active' : ''}`}
@@ -175,7 +231,6 @@ function App() {
           </button>
         </div>
 
-        {/* Let Him Cook Button */}
         <button
           className="let-him-cook-btn"
           onClick={handleSubmit}
