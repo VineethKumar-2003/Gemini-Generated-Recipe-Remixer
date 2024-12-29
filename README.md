@@ -8,7 +8,7 @@ A modern web application that uses Gemini AI to generate personalized recipe rec
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [API Endpoints](#api-endpoints)
-  - [POST /api/recipe](post-/recipe)
+  - [POST /api/recipe](post-/api/recipe)
     - [Recipe Body](#recipe-body)
     - [Example](#example)
     - [Response](#response)
