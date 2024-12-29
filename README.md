@@ -8,7 +8,7 @@ A modern web application that uses Gemini AI to generate personalized recipe rec
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [API Endpoints](#api-endpoints)
-  - [POST /recipe](post-/recipe)
+  - [POST /api/recipe](post-/recipe)
     - [Recipe Body](#recipe-body)
     - [Example](#example)
     - [Response](#response)
@@ -92,7 +92,7 @@ The application will be available at http://localhost:5173, with the backend run
 
 ## API Endpoints
 
-### POST /recipe
+### POST /api/recipe
 Generate recipe recommendations based on user preferences.
 
 #### Recipe Body:
