@@ -32,7 +32,7 @@ function App() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/recipe', {
+      const response = await fetch('http://localhost:5000/api/recipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -251,9 +251,6 @@ function App() {
           {loading ? 'Cooking...' : 'Let Him Cook'}
         </button>
       </main>
-      <footer className="footer-left" />
-      <footer className="footer-right" />
-      <footer className="footer-connect" />
     </div>
   );
 }

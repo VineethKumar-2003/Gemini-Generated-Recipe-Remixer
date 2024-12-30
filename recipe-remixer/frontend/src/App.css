@@ -1,4 +1,3 @@
-/* App.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 body, html, #root {
@@ -113,59 +112,6 @@ input:focus {
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   background: rgba(255, 255, 255, 0.2);
-}
-
-.footer-left {
-  position: absolute;
-  bottom: 0;
-  left: 0%;
-  width: 400px;
-  height: 300px;
-  background-image: url('../src/assets/images/vegetables\ bg\ illustration.png'); /* Replace with actual path */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left bottom;
-  clip-path: polygon(0 0, 0 100%, 100% 100%);
-  transform: scale(1);
-  z-index: 1;
-  filter: hue-rotate(200deg) saturate(400%) brightness(50%);
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.footer-right {
-  position: absolute;
-  bottom: 0;
-  right: 0%;
-  width: 400px;
-  height: 300px;
-  background-image: url('../src/assets/images/vegetables\ bg\ illustration.png'); /* Replace with actual path */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom right;
-  clip-path: polygon(0 100%, 100% 0, 100% 100%);
-  transform: scale(1);
-  z-index: 1;
-  filter: hue-rotate(200deg) saturate(400%) brightness(50%);
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.footer-connect {
-  position: absolute;
-  bottom: -51px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 80px;
-  background-image: url('../src/assets/images/vegetables\ bg\ illustration.png'); /* Replace with actual path */
-  background-repeat: no-repeat;
-  background-size: 55%;
-  background-position: center;
-  opacity: 0.9;
-  filter: hue-rotate(200deg) saturate(400%) brightness(50%);
-  z-index: 2;
-  pointer-events: none;
 }
 
 select {
