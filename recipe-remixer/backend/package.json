@@ -23,9 +23,9 @@
     "mongod": "^2.0.0",
     "mongoose": "^9.1.6",
     "multer": "^2.1.1",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.14"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.14"
   }
 }
